@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Поставщики - TechStore{% endblock %}
+{% block content %}
+    <h1>Наши поставщики и страны поставок</h1>
+    <p>Мы работаем напрямую с проверенными производителями по всему миру, чтобы предлагать вам лучшие технологии по честным ценам.</p>
+    <div class="cards">
+        {% for supplier in suppliers %}
+        <div class="card">
+            <h3>{{ supplier.title }}</h3>
+            <p>{{ supplier.desc }}</p>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}
